@@ -22,7 +22,54 @@
     <link rel="stylesheet" href="./style.css">
 
 <body>
-  
+    <header>
+        <!-- Navbar section -->
+          <section class="flex justify-between items-center bg-[#badeff42] pt-[10px] pb-[10px] pl-[30px] pr-[30px]">
+            <!-- left div -->
+            <div class="flex items-center gap-2">
+                <p> English</p>
+                <img src="./assets/logo.png" alt="">
+                <p>জানালা</p>
+            </div>
+
+            <!-- right div -->
+            <div class="flex items-center gap-2">
+                <!-- Hamburger icon for small and medium devices -->
+                <button class="btn btn-outline btn-primary md:hidden lg:hidden" aria-label="Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <!-- Original buttons, hidden on small/medium screens -->
+                <div class="hidden md:flex gap-2">
+                    <button class="btn btn-outline btn-primary"><i class="fa-solid fa-circle-question"></i>FAQ</button>
+                    <button class="btn btn-outline btn-primary"><i class="fa-solid fa-book-open"></i>Learn</button>
+                    <button class="btn btn-outline btn-primary"><i class="fa-solid fa-right-from-bracket"></i>Logout</button>
+                </div>
+            </div>
+        </section>
+
+         <!-- banner section -->
+          <section class="container mx-auto flex flex-col-reverse md:flex-row items-center justify-between mt-6 px-4 md:px-12">
+
+            <!-- left div -->
+             <div class="space-y-4 grid md:text-left md:w-1/2">
+                <h1 class="font-bold"> <span class=" text-[20px] font-bold text-[#00bcff]">English</span> is Easy!! </h1>
+                <p class="text-[12px]">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা <br>আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে <br> যাবে অন্য একটি Level এ</p>
+                <input type="text" placeholder="Enter Your Name" class="input input-primary" />
+                <input type="password" placeholder="Enter Your Pass" class="input input-primary" />
+                <button class="btn btn-primary max-w-[120px]">Get Started</button>
+
+             </div>
+             <!-- right div -->
+              <div>
+                <img src="./assets/hero-student.png" alt="">
+              </div>
+
+          </section>
+    </header>
+
 </body>
+
+
 
 </html>
