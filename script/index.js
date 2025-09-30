@@ -16,7 +16,7 @@ const loadLevelWord = (id) => {
 const displayLevelWords = (words) => {
 
     const wordContainer = document.getElementById('word-container')
-    wordContainer.innerHTML = ""
+    // wordContainer.innerHTML = ""
 
     words.forEach(word => {
         console.log(word)
