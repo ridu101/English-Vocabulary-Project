@@ -16,14 +16,31 @@ const loadLevelWord = (id) => {
 const displayLevelWords = (words) => {
 
     const wordContainer = document.getElementById('word-container')
-    // wordContainer.innerHTML = ""
+    wordContainer.innerHTML = ""
 
     words.forEach(word => {
         console.log(word)
+        
 
         const wordCard = document.createElement("div")
         wordCard.innerHTML = `
-        <p> Cat</p>
+        <div class="word-cards bg-white shadow-lg text-center py-10 px-5 space-y-4">
+                <h2 class="font-bold text-xl">${word.word}</h2>
+                <p class=" font-semibold">Meaning / Pronounciation </p>
+                <div class=" font-medium text-[2xl] font-bangla">${word.meaning}/${word.pronunciation} </div>
+
+                <div class="flex justify-between mt-5">
+                    <button class="btn bg[#1a91ff1a] hover:bg-[#1a91ff75] " aria-label="Info">
+                        <i class="fa-solid fa-circle-info"></i>
+                    </button>
+                    <button class="btn bg-[#1a91ff1a] hover:bg-[#1a91ff75]" aria-label="Volume">
+                        <i class="fa-solid fa-volume-low"></i>
+                    </button>
+
+                </div>
+
+
+            </div>
         
         `
         wordContainer.append(wordCard)
