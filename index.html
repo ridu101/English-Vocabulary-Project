@@ -16,7 +16,8 @@
     <!-- font integration code  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 
     <link rel="stylesheet" href="./style.css">
@@ -24,7 +25,7 @@
 <body>
     <header>
         <!-- Navbar section -->
-          <section class="flex justify-between items-center bg-[#badeff42] pt-[10px] pb-[10px] pl-[30px] pr-[30px]">
+        <section class="flex justify-between items-center bg-[#badeff42] pt-[10px] pb-[10px] pl-[30px] pr-[30px]">
             <!-- left div -->
             <div class="flex items-center gap-2">
                 <p> English</p>
@@ -43,30 +44,45 @@
                 <div class="hidden md:flex gap-2">
                     <button class="btn btn-outline btn-primary"><i class="fa-solid fa-circle-question"></i>FAQ</button>
                     <button class="btn btn-outline btn-primary"><i class="fa-solid fa-book-open"></i>Learn</button>
-                    <button class="btn btn-outline btn-primary"><i class="fa-solid fa-right-from-bracket"></i>Logout</button>
+                    <button class="btn btn-outline btn-primary"><i
+                            class="fa-solid fa-right-from-bracket"></i>Logout</button>
                 </div>
             </div>
         </section>
 
-         <!-- banner section -->
-          <section class="container mx-auto flex flex-col-reverse md:flex-row items-center justify-between mt-6 px-4 md:px-12">
+        <!-- banner section -->
+        <section
+            class="container mx-auto flex flex-col-reverse md:flex-row items-center justify-between mt-6 px-4 md:px-12">
 
             <!-- left div -->
-             <div class="space-y-4 grid md:text-left md:w-1/2">
-                <h1 class="font-bold"> <span class=" text-[20px] font-bold text-[#00bcff]">English</span> is Easy!! </h1>
-                <p class="text-[12px]">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা <br>আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে <br> যাবে অন্য একটি Level এ</p>
+            <div class="space-y-4 grid md:text-left md:w-1/2">
+                <h1 class="font-bold"> <span class=" text-[20px] font-bold text-[#00bcff]">English</span> is Easy!!
+                </h1>
+                <p class="text-[12px]">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা <br>আপনার
+                    দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে <br> যাবে অন্য একটি Level এ</p>
                 <input type="text" placeholder="Enter Your Name" class="input input-primary" />
                 <input type="password" placeholder="Enter Your Pass" class="input input-primary" />
                 <button class="btn btn-primary max-w-[120px]">Get Started</button>
 
-             </div>
-             <!-- right div -->
-              <div>
+            </div>
+            <!-- right div -->
+            <div>
                 <img src="./assets/hero-student.png" alt="">
-              </div>
+            </div>
 
-          </section>
+        </section>
     </header>
+
+    <main>
+        <!-- lear vocabularies  -->
+        <section class="grid text-center space-y-5 mt-10">
+            <h1 class="font-bold"><span class="text-[#00bcff] font-bold">Let's</span> Learn Vocabularies</h1>
+            <div id="level-container" class="flex flex-wrap gap-3 justify-center"> </div>
+
+        </section>
+    </main>
+
+    <script src="./script/index.js"></script>
 
 </body>
 
