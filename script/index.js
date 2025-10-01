@@ -4,6 +4,12 @@ const createElements = (arr) => {
     return htmlElements.join(" ")
 
 }
+// speak button functionality
+function pronounceWord(word) {
+  const utterance = new SpeechSynthesisUtterance(word);
+  utterance.lang = "en-EN"; // English
+  window.speechSynthesis.speak(utterance);
+}
 
 // Load all lessons (buttons)
 const loadLessons = () => {
@@ -66,8 +72,8 @@ const displayLevelWords = (words) => {
                 <button onclick="loadWordDetails(${word.id})" class="btn bg-[#1a91ff1a] hover:bg-[#1a91ff75]" aria-label="Info">
                     <i class="fa-solid fa-circle-info"></i>
                 </button>
-                <button class="btn bg-[#1a91ff1a] hover:bg-[#1a91ff75]" aria-label="Volume">
-                    <i class="fa-solid fa-volume-low"></i>
+                <button onclick="pronounceWord('${word.word}')" class="btn bg-[#1a91ff1a] hover:bg-[#1a91ff75]" aria-label="Volume">
+                   <i class="fa-solid fa-volume-high"></i>
                 </button>
             </div>
         </div>
