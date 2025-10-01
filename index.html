@@ -75,17 +75,83 @@
 
     <main>
         <!-- learn vocabularies  -->
-        <section class="grid text-center space-y-5 mt-10">
-            <h1 class="font-bold"><span class="text-[#00bcff] font-bold">Let's</span> Learn Vocabularies</h1>
-            <div id="level-container" class="flex flex-wrap gap-3 justify-center"> </div>
+
+        <!-- Lesson buttons container (hidden at first) -->
+        <div id="level-container" class="hidden flex flex-wrap gap-3 justify-center mt-15"></div>
+
+        <section id="word-container" class="bg-gray-100 p-10 w-11/12 mx-auto my-10 
+                flex items-center justify-center min-h-[300px]">
+            <div class="text-center">
+                <h5>আপনি এখনো কোন Lesson Select করেন নি !!</h5>
+                <h1 class="font-semibold font-bangla text-[40px]">একটি Lesson Select করুন।</h1>
+            </div>
+        </section>
+
+        <!-- frequently asked qc section -->
+        <section class="w-11/12 mx-auto space-y-3 mt-20">
+            <h1 class="font-bold text-[24px] md:text-[30px] flex flex-wrap justify-center text-center gap-2">
+                <span class="font-bold text-[#00bcff]">Frequently</span>
+                Asked Questions
+            </h1>
+
+            <div class="collapse collapse-plus bg-base-100 border border-base-300">
+                <input type="radio" name="my-accordion-3" id="faq1" checked />
+                <label for="faq1" class="collapse-title font-semibold">How can I start learning English on this
+                    website?</label>
+                <div class="collapse-content text-sm">
+                    You can start by exploring our beginner lessons, interactive exercises, and quizzes. We also offer
+                    structured courses to guide you step by step.
+                </div>
+            </div>
+
+            <div class="collapse collapse-plus bg-base-100 border border-base-300">
+                <input type="radio" name="my-accordion-3" id="faq2" />
+                <label for="faq2" class="collapse-title font-semibold">Is this website free to use?</label>
+                <div class="collapse-content text-sm">
+                    Click on "Forgot Password" on the login page and follow the instructions sent to your email.
+                </div>
+            </div>
+
+            <div class="collapse collapse-plus bg-base-100 border border-base-300">
+                <input type="radio" name="my-accordion-3" id="faq3" />
+                <label for="faq3" class="collapse-title font-semibold">Do I need to create an account?</label>
+                <div class="collapse-content text-sm">
+                    Go to "My Account" settings and select "Edit Profile" to make changes.
+                </div>
+            </div>
 
         </section>
 
-        <!-- words section -->
-        <section id="word-container" class="bg-gray-100 p-10 w-11/12 mx-auto my-10 grid grid-cols-3 gap-5">
-           
-        </section>
+
+
     </main>
+
+    <footer>
+        <section
+            class="flex flex-col md:flex-row justify-between gap-8 p-6 md:p-20 items-center text-center md:text-left mt-50 bg-gray-100">
+            <!-- left corner -->
+            <div>
+                <div class="flex items-center justify-center md:justify-start space-x-2">
+                    <p class="font-bold">English</p>
+                    <img src="./assets/logo.png" alt="">
+                    <p>জানালা</p>
+                </div>
+                <h2 class="font-semibold">ইংরেজি শিখুন সহজে</h2>
+                <h2>Providing ED-Tech Applications since 2025</h2>
+            </div>
+
+            <!-- right div -->
+            <div>
+                <h1 class="font-bold mb-2">FOLLOW US</h1>
+                <div class="flex justify-center md:justify-start space-x-4 text-2xl">
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-github"></i></a>
+                    <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+                </div>
+            </div>
+        </section>
+    </footer>
+
 
     <script src="./script/index.js"></script>
 
