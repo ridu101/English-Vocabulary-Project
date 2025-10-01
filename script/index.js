@@ -51,7 +51,7 @@ const displayLevelWords = (words) => {
             <div class="font-medium text-[2xl] font-bangla">${word.meaning ?word.meaning: "অর্থ পাওয়া যায়নি"} / ${word.pronunciation ? word.pronunciation:"Pronunciation পাওয়া যায়নি "}</div>
 
             <div class="flex justify-between mt-5">
-                <button onclick="my_modal_5.showModal()" class="btn bg-[#1a91ff1a] hover:bg-[#1a91ff75]" aria-label="Info">
+                <button onclick="loadWordDetails(${word.id})" class="btn bg-[#1a91ff1a] hover:bg-[#1a91ff75]" aria-label="Info">
                     <i class="fa-solid fa-circle-info"></i>
                 </button>
                 <button class="btn bg-[#1a91ff1a] hover:bg-[#1a91ff75]" aria-label="Volume">
@@ -80,6 +80,43 @@ const displayLesson = (lessons) => {
         levelContainer.append(btnDiv)
     }
 }
+
+// word details load sections
+    const loadWordDetails= async(id) =>{
+        const url = `https://openapi.programming-hero.com/api/word/${id}`
+        const response= await fetch(url)
+        const details= await response.json();
+        displayWordDetails(details.data)
+    }
+// load word display function
+    const displayWordDetails=(word)=>{
+        console.log(word);
+        const detailsBox= document.getElementById('details-container');
+        detailsBox.innerHTML=`
+                    <div>
+                    <h2 class="font-bold text-xl">${word.word}<i class="fa-solid fa-microphone-lines font-bold"></i>:${word.pronunciation}</h2>
+                    </div>
+                    <div>
+                        <h1 class="font-bold">Meaning</h1>
+                        <p>${word.meaning}</p>
+                    </div>
+                    <div>
+                        <h2 class="font-bold">Example</h2>
+                        <p>${word.sentence}</p>
+                    </div>
+                    <div>
+                        <h1 class="font-bold">সমার্থক শব্দ গুলো</h1>
+                        <span class="btn">Syn-1</span>
+                        <span class="btn">Syn-1</span>
+                        <span class="btn">Syn-1</span>
+                    </div>`
+
+
+
+        document.getElementById('word_modal').showModal()
+
+    }
+
 
 // call first load
 loadLessons()
