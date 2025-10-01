@@ -22,6 +22,17 @@ const displayLevelWords = (words) => {
     const wordContainer = document.getElementById('word-container')
     wordContainer.innerHTML = ""   // remove default message or previous content
 
+    if (words.length == 0) {
+         wordContainer.innerHTML = `
+         <div class="text-center col-span-full  space-y-4">
+                <i class="fa-solid fa-triangle-exclamation text-[60px]"></i>
+                <h5 class="font-bangla">এই Lesson এ এখনো কোন Vocabulary যুক্ত করা হয়নি। !!</h5>
+                <h1 class="font-semibold font-bangla text-[35px]">নেক্সট Lesson এ যান</h1>
+            </div>
+         
+            `    
+    }
+
     // make container grid instead of centered message
     wordContainer.className = "bg-gray-100 p-10 w-11/12 mx-auto my-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3"
 
@@ -29,9 +40,9 @@ const displayLevelWords = (words) => {
         const wordCard = document.createElement("div")
         wordCard.innerHTML = `
         <div class="word-cards bg-white shadow-lg text-center py-10 px-5 space-y-4">
-            <h2 class="font-bold text-xl">${word.word}</h2>
+            <h2 class="font-bold text-xl">${word.word ? word.word: "শব্দ পাওয়া যায়নি"}</h2>
             <p class="font-semibold">Meaning / Pronounciation </p>
-            <div class="font-medium text-[2xl] font-bangla">${word.meaning} / ${word.pronunciation}</div>
+            <div class="font-medium text-[2xl] font-bangla">${word.meaning ?word.meaning: "অর্থ পাওয়া যায়নি"} / ${word.pronunciation ? word.pronunciation:"Pronunciation পাওয়া যায়নি "}</div>
 
             <div class="flex justify-between mt-5">
                 <button class="btn bg-[#1a91ff1a] hover:bg-[#1a91ff75]" aria-label="Info">
