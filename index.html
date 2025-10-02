@@ -28,9 +28,10 @@
         <section class="flex justify-between items-center bg-[#badeff42] pt-[10px] pb-[10px] pl-[30px] pr-[30px]">
             <!-- left div -->
             <div class="flex items-center gap-2">
-                <p> English</p>
+                <p class=" text-[#00bcff]"> Know</p>
+                <p class="font-bold text-xl">English </p>
+                <span class=" text-[#00bcff]">Batter </span>
                 <img src="./assets/logo.png" alt="">
-                <p>জানালা</p>
             </div>
 
             <!-- right div -->
@@ -44,65 +45,70 @@
                 <div class="hidden md:flex gap-2">
                     <button class="btn btn-outline btn-primary"><i class="fa-solid fa-circle-question"></i>FAQ</button>
                     <button class="btn btn-outline btn-primary"><i class="fa-solid fa-book-open"></i>Learn</button>
-                    <button class="btn btn-outline btn-primary"><i
-                            class="fa-solid fa-right-from-bracket"></i>Logout</button>
+                    <button class="btn btn-outline btn-primary"><i class="fa-solid fa-right-from-bracket"></i>Logout</button>
                 </div>
             </div>
         </section>
 
         <!-- banner section -->
-        <section
+        <!-- banner section -->
+        <section id="login-section"
             class="container mx-auto flex flex-col-reverse md:flex-row items-center justify-between mt-6 px-4 md:px-12">
 
             <!-- left div -->
             <div class="space-y-4 grid md:text-left md:w-1/2">
                 <h1 class="font-bold"> <span class=" text-[20px] font-bold text-[#00bcff]">English</span> is Easy!!
                 </h1>
-                <p class="text-[12px]">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা <br>আপনার
-                    দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে <br> যাবে অন্য একটি Level এ</p>
-                <input type="text" placeholder="Enter Your Name" class="input input-primary" />
-                <input type="password" placeholder="Enter Your Pass" class="input input-primary" />
-                <button class="btn btn-primary max-w-[120px]">Get Started</button>
+                <p class="text-[12px]">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন...</p>
 
+                <input id="inputNumber" type="text" placeholder="Enter Your Name" class="input input-primary" />
+                <input id="inputPassword" type="password" placeholder="Enter Your Pass" class="input input-primary" />
+                <button id="start-btn" class="btn btn-primary max-w-[120px]">Get Started</button>
+                <p id="login-error" class="text-red-500 font-semibold hidden">Invalid login! Try again.</p>
             </div>
+
             <!-- right div -->
             <div>
                 <img src="./assets/hero-student.png" alt="">
             </div>
-
         </section>
+
     </header>
 
     <main>
 
         <!-- learn vocabularies  -->
 
-        <div id="level-container" class=" flex flex-wrap gap-3 justify-center mt-15"></div>
+        <div id="level-container" class="hidden flex flex-wrap gap-3 justify-center mt-15"></div>
+
+
+
         <!-- spinner section -->
         <section class="flex justify-center items-center py-10 hidden">
             <span class="loading loading-bars loading-lg" id="spinner"></span>
         </section>
 
         <!-- search section -->
-        <section class="flex justify-center my-10">
+        <section id="search-container" class="flex justify-center my-10 hidden">
             <div class="join">
                 <div>
                     <label class="input validator join-item">
                         <i class="fa-solid fa-magnifying-glass-plus"></i>
                         <input id="input-search" type="text" placeholder="Search Vocabulary Here" required />
                     </label>
-
                 </div>
                 <button id="btn-search" class="btn btn-primary join-item">Search</button>
             </div>
         </section>
-        <section id="word-container" class="bg-gray-100 p-10 w-11/12 mx-auto my-10 
+        <!-- word container section -->
+        <section id="word-container" class="hidden bg-gray-100 p-10 w-11/12 mx-auto my-10 
                 flex items-center justify-center min-h-[300px]">
-            <div class="text-center ">
+            <div class="text-center">
                 <h5 class="font-bangla">আপনি এখনো কোন Lesson Select করেন নি !!</h5>
                 <h1 class="font-semibold font-bangla text-[40px]">একটি Lesson Select করুন।</h1>
             </div>
         </section>
+
 
         <!-- frequently asked qc section -->
         <section class="w-11/12 mx-auto space-y-3 mt-20">
@@ -167,9 +173,10 @@
             <!-- left corner -->
             <div>
                 <div class="flex items-center justify-center md:justify-start space-x-2">
-                    <p class="font-bold">English</p>
+                    <p class="font-bold  text-[#00bcff]">Know </p>
+
+                    <p class="">English <span class=" text-[#00bcff] font-bold">Better </span></p>
                     <img src="./assets/logo.png" alt="">
-                    <p>জানালা</p>
                 </div>
                 <h2 class="font-semibold">ইংরেজি শিখুন সহজে</h2>
                 <h2>Providing ED-Tech Applications since 2025</h2>
