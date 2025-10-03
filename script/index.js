@@ -19,6 +19,26 @@ const loadLessons = () => {
             displayLesson(json.data)
         })
 }
+
+// Display lessons as buttons
+const displayLesson = (lessons) => {
+    const levelContainer = document.getElementById('level-container')
+    levelContainer.innerHTML = ""
+
+    for (let lesson of lessons) {
+        // guard
+        if (!lesson || !lesson.level_no) continue;
+        const btnDiv = document.createElement('div')
+       
+        btnDiv.innerHTML = `
+            <button id="lesson-btn-${lesson.level_no}" onclick="loadLevelWord(${lesson.level_no})" 
+                    class="btn btn-outline btn-primary lesson-btn">
+                <i class="fa-solid fa-book-open"></i> Lesson-${lesson.level_no}
+            </button>
+        `
+        levelContainer.append(btnDiv)
+    }
+}
 const removeActive = () => {
     const lessonButtons = document.querySelectorAll(".lesson-btn")
     lessonButtons.forEach(btn => btn.classList.remove("active"));
@@ -81,24 +101,7 @@ const displayLevelWords = (words) => {
     manageSpinner(false);
 }
 
-// Display lessons as buttons
-const displayLesson = (lessons) => {
-    const levelContainer = document.getElementById('level-container')
-    levelContainer.innerHTML = ""
 
-    for (let lesson of lessons) {
-        // guard
-        if (!lesson || !lesson.level_no) continue;
-        const btnDiv = document.createElement('div')
-        btnDiv.innerHTML = `
-            <button id="lesson-btn-${lesson.level_no}" onclick="loadLevelWord(${lesson.level_no})" 
-                    class="btn btn-outline btn-primary lesson-btn">
-                <i class="fa-solid fa-book-open"></i> Lesson-${lesson.level_no}
-            </button>
-        `
-        levelContainer.append(btnDiv)
-    }
-}
 
 // word details load sections
 const loadWordDetails = async (id) => {
